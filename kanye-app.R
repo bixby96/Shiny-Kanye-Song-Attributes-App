@@ -6,6 +6,9 @@ library(shinythemes)
 library(spotifyr)
 library(ggthemes)
 
+options(DT.options = list(pageLength = 5, order = list(2, "desc"),
+        lengthMenu = list(c(5, 10, 25, -1), c('5', '10', '25', 'All'))))
+
 Sys.setenv(SPOTIFY_CLIENT_ID = 'XXXXXXXXXXXXXXXXXXXXXXXXXXX')
 Sys.setenv(SPOTIFY_CLIENT_SECRET = 'XXXXXXXXXXXXXXXXXXXXXXXX')
 access_token <- get_spotify_access_token()
